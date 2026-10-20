@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>Happy Birthday Vishuuu ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="tagline">A little surprise made with love 💌</p>
+    <div class="big-heart">💗</div>
+    <h1>Happy Birthday,<br>Vishuuu! 🎂</h1>
+    <p class="intro">For my one and only favourite person my cutuuuu pieeee... 🥹❤️<br>With love, your Sweety 💋</p>
+    <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Open Your Surprise ✨</button>
+  </header>
+
+  <main>
+    <section id="letter" class="section">
+      <p class="tagline">From my heart to yours</p>
+      <h2>A Letter For You 💌</h2>
+      <div class="card letter">
+        <p>Happiest Birthday, Vishuuu! aka Cheetah ❤️🎂</p>
+        <p>so yeah my someone special you know your presence means to me alot in my life.2 years ek dooje naal ladd deya ek dooje nu manaundeya.You will always be my safe place always forever and ever. 🥹💗</p>
+        <p>I wish tuc hamesha khush raho,i cant even explain in words ki jadd tuc khush hunne oh menu kinni khushi mildi aa.Thodi khushi ch hi meri khushi aa meri jaan. ✨</p>
+        <p>Thank you meri life da ehna sohna part banan lai. You deserve all the happiness in this world. 🫶</p>
+        <p>Happy Birthday, sohneee! I love youuu so muchhh. 💋❤️</p>
+        <p class="signature">Forever yours,<br>💗</p>
+      </div>
+    </section>
+
+    <section class="section" id="birthdayCake">
+      <p class="tagline">Make a birthday wish 💖</p>
+      <h2>fukk maaro chetti(tap on blow the candle sir), Vishuuu! 🎂</h2>
+      <div class="cake-card">
+        <p class="cake-text">Close your eyes, make a wish, and blow! 🥹❤️</p>
+        <div class="cake-scene" aria-label="Birthday cake with a lit candle">
+          <div class="candle">
+            <div class="flame" id="flame"></div>
+            <div class="smoke" id="smoke"></div>
+            <div class="wick"></div>
+            <div class="candle-body"></div>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-layer cake-middle"></div>
+          <div class="cake-layer cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p id="cakeStatus" aria-live="polite">Your candle is waiting, birthday boy! 🕯️</p>
+        <button class="btn" id="micButton" onclick="startBlowDetection()">🎤 Enable Mic & Blow</button>
+        <button class="btn cake-manual" id="manualButton" onclick="extinguishCandle()">Blow Out Candle 💨</button>
+        <div id="cakeWish" class="cake-wish">
+          <h2>Wish Granted! 💖</h2>
+          <p>Happy Birthday, Vishuuu! 🎂 May all your dreams come true.</p>
+          <p>Hun ek wish mere vallo vi: Be same as you are dont change for anybody! 🥹❤️</p>
+          <p class="signature">Lots of love, Kuchupuchuu 💋</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="memories" class="section">
+      <p class="tagline">My favourite memories</p>
+      <h2>Our Little World 📸</h2>
+      <div class="photo-gallery">
+        <div class="photo-card"><img src="photos/photo1..jpeg" alt="Our favourite picture together"><p>Maaahhh cutieee piee🥹</p></div>
+        <div class="photo-card"><img src="photos/photo5.jpeg" alt="A special memory together"><p>One of the most happiest moment 💗</p></div>
+        <div class="photo-card"><img src="photos/photo3..jpeg" alt="A beautiful memory of us"><p>Us, always ♾️</p></div>
+        <div class="photo-card"><img src="photos/photo4..jpeg" alt="Another memory together"><p>My forever favourite ❤️</p></div>
+        <div class="photo-card"><img src="photos/photo6.jpeg" alt="Another memory together"><p>Saari raat vc te lagge rehna,katthe sona. ❤️</p></div>  
+        <div class="photo-card"><img src="photos/photo7.jpeg" alt="Another memory together"><p>Mere kake di jundi.hihihi ❤️</p></div>
+        <div class="photo-card"><img src="photos/photo8.jpeg" alt="Another memory together"><p>Mai apni masti ch sir apni poori ego ch ❤️</p></div>
+        <div class="photo-card"><img src="photos/photo2.jpeg" alt="Another memory together"><p> Meri buggdii(nashedi)❤️</p></div>
+      </div>
+      <p class="small-note"> Every picture with you is a memory I want to keep forever. 💌</p>
+    </section>
+
+    <section id="surprise" class="section">
+      <p class="tagline">One last thing, birthday boy...</p>
+      <h2>Open Your Gift 🎁</h2>
+      <div class="card surprise-card">
+        <div class="gift">🎁</div>
+        <p>Vishuuu, A special gift for you.Are you ready? 🙈❤️</p>
+        <button class="btn" id="revealBtn" onclick="revealSurprise()">Tap To Open 💝</button>
+        <div id="secretMessage" class="secret-message">
+          <h2>I Love Youuu! 💗</h2>
+          <p>You are my favourite notification, my favourite person, and one of my favourite reasons to smile. 🥹❤️</p>
+          <p> I wish tuc ethe hunde apne birthday te I would hug you so tight but no worries, may your all dreams come true, and you get alot of love in your life,as you deserve.I will always be there for you in every situation.</p>
+          <p>Happy Birthday, my Vishuuu! 💋🎂</p>
+          <h3>Lots and lots of love,</h3><h2>YOUR SWEETY 💌</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Made with endless love by Sweety 💗<p>For Vishuuu, my special person. ♾️</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

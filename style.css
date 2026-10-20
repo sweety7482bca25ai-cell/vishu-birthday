@@ -1,0 +1,63 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:Georgia,"Times New Roman",serif; color:#632940; background:linear-gradient(180deg,#fff0f5,#fffaf8,#ffe5ee); overflow-x:hidden; }
+button { font:inherit; }
+.hero { min-height:100vh; min-height:100svh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:30px 20px; background:radial-gradient(circle at top left,#ffd3e1,transparent 40%),radial-gradient(circle at bottom right,#ffc0d5,transparent 40%); }
+.tagline { color:#d33d76; font:bold .8rem Arial,sans-serif; letter-spacing:2px; text-transform:uppercase; text-align:center; line-height:1.6; }
+.big-heart { font-size:80px; margin:20px 0; animation:heartbeat 1.5s infinite; }
+h1 { font-size:clamp(2.8rem,10vw,5rem); color:#d63370; line-height:1.1; margin-bottom:20px; text-shadow:0 5px 20px #ff9fbe55; }
+.intro { font-size:1.15rem; line-height:1.8; margin-bottom:25px; }
+.btn { border:none; border-radius:50px; background:#d63370; color:white; padding:14px 25px; font-size:1rem; cursor:pointer; box-shadow:0 8px 20px #d6337033; transition:transform .3s,box-shadow .3s; }
+.btn:hover { transform:translateY(-3px); box-shadow:0 12px 25px #d6337055; }
+.btn:disabled { cursor:default; opacity:.8; }
+.section { max-width:950px; margin:auto; padding:75px 20px; }
+h2 { text-align:center; font-size:clamp(2rem,7vw,3rem); color:#d63370; margin:15px 0 30px; font-weight:normal; }
+.card,.cake-card { background:#ffffffd9; border:1px solid #ffd0df; border-radius:25px; padding:28px; box-shadow:0 12px 35px #bc41651a; }
+.letter { font-size:1.05rem; line-height:1.9; }
+.letter p { margin-bottom:18px; }
+.signature { color:#d63370; text-align:right; font-style:italic; font-size:1.2rem; }
+.photo-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+.photo-card { min-width:0; background:white; padding:10px; border-radius:16px; box-shadow:0 8px 25px #b53e671a; transform:rotate(-1deg); transition:transform .3s; }
+.photo-card:nth-child(even) { transform:rotate(1deg); }
+.photo-card:hover { transform:rotate(0deg) scale(1.03); }
+.photo-card img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; border-radius:10px; background:#ffe0eb; }
+.photo-card p { text-align:center; padding:12px 3px 5px; color:#c82f67; font-size:.95rem; }
+.small-note { text-align:center; margin-top:22px; line-height:1.7; }
+.cake-card { text-align:center; padding:25px 15px; }
+.cake-text { line-height:1.7; margin-bottom:10px; }
+.cake-scene { position:relative; width:290px; max-width:100%; height:255px; margin:15px auto 20px; }
+.cake-plate { position:absolute; width:100%; height:17px; bottom:10px; left:0; border-radius:50%; background:#e9a6bd; box-shadow:0 5px 0 #d887a6; }
+.cake-layer { position:absolute; left:50%; transform:translateX(-50%); border-radius:12px 12px 17px 17px; }
+.cake-bottom { bottom:27px; width:94%; height:72px; background:linear-gradient(#ff8db6,#f45c91); border:3px solid #f7a9c5; }
+.cake-middle { bottom:95px; width:78%; height:57px; background:linear-gradient(#ffd2e2,#ffb4d0); border:3px solid #fff0f5; }
+.cake-top { position:absolute; bottom:145px; left:50%; transform:translateX(-50%); width:78%; height:27px; border-radius:50%; background:#fff0f6; border:3px solid #ffc2d8; z-index:2; }
+.candle { position:absolute; bottom:169px; left:50%; transform:translateX(-50%); width:22px; height:65px; z-index:4; }
+.candle-body { position:absolute; bottom:0; width:22px; height:52px; border-radius:5px 5px 2px 2px; background:repeating-linear-gradient(135deg,#fff 0 7px,#ff8ab1 7px 14px); box-shadow:inset -4px 0 0 #ec6797; }
+.wick { position:absolute; bottom:51px; left:9px; width:4px; height:9px; background:#62404a; border-radius:3px; }
+.flame { position:absolute; bottom:58px; left:3px; width:16px; height:25px; border-radius:50% 50% 45% 45%; background:radial-gradient(ellipse at 50% 70%,#fff9a8 0 22%,#ffb52e 48%,#ff6b35 80%); box-shadow:0 0 20px #ffb52e,0 0 35px #ff8b6280; transform-origin:bottom center; animation:candleFlicker .7s infinite alternate; }
+.flame.off { display:none; }
+.smoke { display:none; position:absolute; bottom:78px; left:5px; width:13px; height:18px; border-radius:50%; background:#aaa; opacity:0; }
+.smoke.show { display:block; animation:smokeRise 1.5s ease-out forwards; }
+#cakeStatus { min-height:30px; line-height:1.6; margin:10px 0; }
+.cake-manual { margin:8px 5px; background:white; color:#d63370; border:1px solid #ffc1d6; }
+#micButton { margin:8px 5px; }
+.cake-wish { display:none; padding-top:20px; line-height:1.8; animation:appear .8s ease; }
+.cake-wish.show { display:block; }
+.cake-wish p { margin:15px 0; }
+.surprise-card { text-align:center; line-height:1.8; }
+.gift { font-size:75px; margin-bottom:15px; animation:bob 2s infinite ease-in-out; }
+.surprise-card > p { margin-bottom:22px; }
+.secret-message { display:none; margin-top:30px; animation:appear .8s ease; }
+.secret-message.show { display:block; }
+.secret-message p { margin:15px 0; }
+footer { text-align:center; padding:35px 20px; line-height:1.8; color:#a44b70; }
+.floating-heart { position:fixed; bottom:-30px; z-index:10; pointer-events:none; animation:floatUp 4s linear forwards; }
+@keyframes heartbeat { 0%,100%{transform:scale(1)} 15%{transform:scale(1.15)} 30%{transform:scale(1)} 45%{transform:scale(1.08)} }
+@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes appear { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes floatUp { to{transform:translateY(-115vh) rotate(35deg);opacity:0} }
+@keyframes candleFlicker { from{transform:rotate(-5deg) scale(1)} to{transform:rotate(5deg) scale(1.08)} }
+@keyframes smokeRise { 0%{opacity:0;transform:translateY(0) scale(.5)} 25%{opacity:.65} 100%{opacity:0;transform:translateY(-48px) translateX(10px) scale(2)} }
+@media(min-width:650px) { .photo-gallery { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+@media(max-width:480px) { .section{padding:55px 16px} .card,.cake-card{padding:21px 15px} .photo-gallery{gap:10px} .photo-card{padding:7px} .photo-card p{font-size:.83rem} .big-heart{font-size:65px} }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important} }
